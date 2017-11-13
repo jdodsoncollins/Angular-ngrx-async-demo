@@ -1,6 +1,6 @@
 # Angular & ngrx async demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0. Run `npm install -g @angular/cli` if the Angular CLI is not installed and you would like to have it for serving this project.
 
 ## Development server
 
@@ -13,6 +13,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+You can also use `npm install` if you would prefer to not use the Angular CLI.
 
 ## Running unit tests
 
