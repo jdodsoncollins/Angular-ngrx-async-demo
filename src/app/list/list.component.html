@@ -1,0 +1,20 @@
+<div class="list-container">
+    <div class="search-container"><input type="text" [(ngModel)]="movieFilterText" placeholder="Search movies..."></div>
+    <div class="theater-container">
+        <div 
+        class="theater-select" 
+        *ngFor="let theater of (appService.theaters$ | async)"
+        (click)="selectTheater(theater)"
+        [ngClass]="{'selected' : selectedTheater && selectedTheater.id == theater.id}"
+      >
+        <div><span>{{theater.name}}</span></div>
+      </div>
+    </div>
+    <div class="selected-theater-movies-container" *ngIf="selectedTheater">
+      <div class="selected-theater-movies"
+      *ngFor="let theaterMovie of selectedTheater.movies | filter : movieFilterText"
+      >
+        <app-item [movie]="theaterMovie"></app-item>
+      </div>
+    </div>
+</div>
